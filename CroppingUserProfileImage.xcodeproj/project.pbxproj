@@ -56,15 +56,39 @@
 		F7C809262A2377AB00B8C793 /* CroppingUserProfileImage */ = {
 			isa = PBXGroup;
 			children = (
-				F7C809272A2377AB00B8C793 /* AppDelegate.swift */,
-				F7C809292A2377AB00B8C793 /* SceneDelegate.swift */,
-				F7C8092B2A2377AB00B8C793 /* ViewController.swift */,
-				F7C8092D2A2377AB00B8C793 /* Main.storyboard */,
-				F7C809302A2377AD00B8C793 /* Assets.xcassets */,
-				F7C809322A2377AD00B8C793 /* LaunchScreen.storyboard */,
-				F7C809352A2377AD00B8C793 /* Info.plist */,
+				F7C8093E2A2377D800B8C793 /* App */,
+				F7C8093B2A2377C000B8C793 /* Storyboards */,
+				F7C8093C2A2377CA00B8C793 /* ViewControllers */,
 			);
 			path = CroppingUserProfileImage;
+			sourceTree = "<group>";
+		};
+		F7C8093B2A2377C000B8C793 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F7C8092D2A2377AB00B8C793 /* Main.storyboard */,
+				F7C809322A2377AD00B8C793 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F7C8093C2A2377CA00B8C793 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7C8092B2A2377AB00B8C793 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7C8093E2A2377D800B8C793 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F7C809272A2377AB00B8C793 /* AppDelegate.swift */,
+				F7C809292A2377AB00B8C793 /* SceneDelegate.swift */,
+				F7C809302A2377AD00B8C793 /* Assets.xcassets */,
+				F7C809352A2377AD00B8C793 /* Info.plist */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +316,6 @@
 				INFOPLIST_FILE = CroppingUserProfileImage/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +343,6 @@
 				INFOPLIST_FILE = CroppingUserProfileImage/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
