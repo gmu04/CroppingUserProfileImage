@@ -18,8 +18,7 @@ class ViewController: UIViewController {
 		
 		self.cropProfileImageButton.addTarget(self, action: #selector(cropProfileImage(_:)), for: .touchUpInside)
 		view.addSubview(cropProfileImageButton)
-		
-		
+
 		let margins = self.view.safeAreaLayoutGuide
 		NSLayoutConstraint.activate([
 			profilePhotoImageView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
@@ -39,8 +38,20 @@ class ViewController: UIViewController {
 		])
 	}
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+		self.transparentCircleView = TransparentCircleView(frame: profilePhotoImageView.frame)
+		view.addSubview(transparentCircleView)
+		transparentCircleView.backgroundColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1.0)
+		transparentCircleView.layer.opacity = 0.8
+		
+		
+	}
+	
 	@objc private func cropProfileImage(_ sender:UIButton){
 		print("\(#function) tapped")
+		
 	}
 	
 	
@@ -48,6 +59,10 @@ class ViewController: UIViewController {
 	
 	
 	// MARK: - Fields & Properties
+	
+	private var transparentCircleView:TransparentCircleView!
+	private var viewModel = ViewModel()
+	
 	
 	private lazy var profilePhotoImageView:UIImageView = {
 		let iv = UIImageView()
@@ -67,6 +82,7 @@ class ViewController: UIViewController {
 		iv.clipsToBounds = true
 		return iv
 	}()
+	
 	
 	private lazy var cropProfileImageButton:UIButton = {
 		let bt = UIButton()
