@@ -29,15 +29,16 @@ class ViewController: UIViewController {
 			profilePhotoImageView.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 2.2/5),
 			profilePhotoImageView.topAnchor.constraint(equalTo: margins.topAnchor),
 
-			profilePhotoCroppedImageView.topAnchor.constraint(equalTo: profilePhotoImageView.bottomAnchor, constant: 16),
+			cropProfileImageButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
+			cropProfileImageButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
+			cropProfileImageButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.4 / 5),
+			cropProfileImageButton.topAnchor.constraint(equalTo: profilePhotoImageView.bottomAnchor, constant: 16),
+
+			profilePhotoCroppedImageView.topAnchor.constraint(equalTo: cropProfileImageButton.bottomAnchor, constant: 16),
 			profilePhotoCroppedImageView.leadingAnchor.constraint(equalTo: margins.leadingAnchor),
 			profilePhotoCroppedImageView.trailingAnchor.constraint(equalTo: margins.trailingAnchor),
 			profilePhotoCroppedImageView.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 1.8 / 5),
 			
-			cropProfileImageButton.leadingAnchor.constraint(equalTo: margins.leadingAnchor, constant: 20),
-			cropProfileImageButton.trailingAnchor.constraint(equalTo: margins.trailingAnchor, constant: -20),
-			cropProfileImageButton.heightAnchor.constraint(equalTo: margins.heightAnchor, multiplier: 0.4 / 5),
-			cropProfileImageButton.bottomAnchor.constraint(equalTo: margins.bottomAnchor, constant: -16),
 		])
 	}
 	
@@ -160,11 +161,10 @@ class ViewController: UIViewController {
 	
 	private lazy var cropProfileImageButton:UIButton = {
 		let bt = UIButton()
-		bt.setTitle("Crop Profile Image", for: .normal)
-		bt.backgroundColor = .blue
-		bt.setTitleColor(.white, for: .normal)
 		bt.translatesAutoresizingMaskIntoConstraints = false
-		bt.backgroundColor = .blue
+		bt.setTitle("Crop Profile Image", for: .normal)
+		bt.setTitleColor(.white, for: .normal)
+		bt.backgroundColor = .gray
 		return bt
 	}()
 
